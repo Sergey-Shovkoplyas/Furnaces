@@ -7,12 +7,122 @@
 
 /* <1200px (960px) */
 +media-breakpoint-down(lg)
+  .header__city 
+    display: none
+  .header__nav
+    flex-basis: 45%
+  .header__phone
+    flex-basis: 21%
+    font-size: 15px
+  .nav__item 
+    margin-right: 12px
   
 /* <992px (720px) */
 +media-breakpoint-down(md)
+  .header__nav
+    flex-basis: 40%
 
 /* <768px (540px) */
 +media-breakpoint-down(sm)
+  .header__row
+    align-items: center
+  .header__logo
+    flex-basis: 50%
+    position:  relative
+    z-index: 3
+  .header__phone
+    display: none
+  
+  .header 
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    padding: 10px 0
+    &::before 
+      content: ''
+      position: absolute
+      z-index: 2
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+    &.active::before
+      background-color: rgba(0,60,96,.9)
+
+  .header__nav
+    position: fixed
+    top: -100%
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0,142,214,1)
+    transition: all .3s
+  .header__nav.active 
+    top: 0
+
+  .nav 
+    padding-top: 70px
+  .nav__item 
+    display: block
+    margin: 0
+    text-align: center
+    border-bottom: 1px solid #fff
+    &:last-child 
+      border-bottom: none
+  .nav__link
+    display: block
+    padding: 10px 0px
+    font-size: 24px
+    
+
+
+  .header__burger 
+    position: relative
+    z-index: 3
+    display: block
+    width: 30px
+    height: 25px
+    span 
+      display: block
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      height: 4px
+      width: 100%
+      border-radius: 2px
+      background-color: #fff
+      transition: all .3s
+    &::before,
+    &::after 
+      content: ''
+      position: absolute
+      width: 100%
+      height: 4px
+      border-radius: 2px
+      background-color: #fff
+      transition: all .3s
+    &::before
+      top: 0
+    &::after
+      bottom: 0
+  .header__burger.active::before  
+    top: 50%
+    transform: rotate(45deg) translateY(-50%)
+  .header__burger.active::after 
+    bottom: 50% 
+    transform: rotate(-45deg) translateY(50%)
+  .header__burger.active 
+    span 
+      transform: scale(0)
+
+
+  .furnaces
+    padding-top: 120px
+
+
+  .furnaces__gallery
+    z-index: -1
 
 /* <576px (auto) */
 +media-breakpoint-down(xs)
