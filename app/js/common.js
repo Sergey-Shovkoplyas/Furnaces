@@ -11,6 +11,8 @@ $( document ).ready(function() {
 		$('body').toggleClass('locked');
 		if ( !$('.header').hasClass('active') ) {
 			$('.header').addClass('active');
+		} else if ( !$('html').scrollTop() ) {
+			$('.header').removeClass('active');
 		}
 	});
 
