@@ -45,11 +45,15 @@
   .header__row
     align-items: center
   .header__logo
-    flex-basis: 50%
+    flex-basis: 70%
+    order: 1
     position:  relative
     z-index: 3
   .header__phone
-    display: none
+    order: 2
+  .header__burger 
+    order: 3
+  
   
   .header 
     position: fixed
@@ -93,6 +97,16 @@
     display: block
     padding: 10px 0px
     font-size: 24px
+
+  .header__phone
+    flex-basis: 27px
+    z-index: 3
+    a
+      display: block
+      width: 27px
+      height: 27px
+      font-size: 0
+      background: url('../img/phone.png')
     
 
 
@@ -100,7 +114,7 @@
     position: relative
     z-index: 3
     display: block
-    width: 30px
+    flex-basis: 30px
     height: 25px
     span 
       display: block
@@ -199,17 +213,3 @@
 
  
 
-
-/*==========  Mobile First  ==========*/
-
-/* ≥576px (540px) */
-+media-breakpoint-up(sm)
-  
-/* ≥768px (720px) */
-+media-breakpoint-up(md)
-
-/* ≥992px (960px) */
-+media-breakpoint-up(lg)
-
-/* ≥1200px (1140px) */
-+media-breakpoint-up(xl)
