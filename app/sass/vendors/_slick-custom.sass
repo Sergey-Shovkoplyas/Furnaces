@@ -1,0 +1,63 @@
+.slick-initialized 
+  position: relative
+
+.slick-dots
+	position: absolute
+	padding: 0
+	margin: 0
+	list-style: none
+	li 
+		display: inline-block
+		margin-right: 10px
+	button 
+		padding: 0
+		width: 11px
+		height: 11px
+		border: 2px solid #d8d8d8
+		border-radius: 50%	
+		font-size: 0
+		background-color: transparent
+		outline: none
+		transition: all .3s
+	li.slick-active 
+		button 
+			transform: scale(1.5)
+			background-color: #05a2ec
+
+.slick-arrow 
+	position: absolute
+	z-index: 2
+	font-size: 0
+	border: 2px solid #fff 
+	width: 27px
+	height: 27px
+	border-radius: 50%
+	background-color: transparent
+	outline: none
+	transition: all .3s
+	&::after 
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 7px
+		height: 7px
+		border-top: 2px solid #fff 
+		border-left: 2px solid #fff 
+
+.slick-prev 
+	transform: rotate(-45deg)
+	&:hover 
+		background-color: #05a2ec
+		transform: scale(1.1) rotate(-45deg)
+	&:active 
+		transform: scale(.8) rotate(-45deg)
+
+.slick-next
+	transform: rotate(135deg)
+	&:hover 
+		background-color: #05a2ec
+		transform: scale(1.1) rotate(135deg)
+	&:active 
+		transform: scale(.8) rotate(135deg)
