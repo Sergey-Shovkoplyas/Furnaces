@@ -33,7 +33,7 @@ function serve () {
 }
 
 function dist () {
-	return src('app/css/style.min.css')
+	return src('app/css/main.min.css')
 	.pipe(cleanCSS())
 	.pipe(dest('app/css'))
 	.pipe(gcmq())
