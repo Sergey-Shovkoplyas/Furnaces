@@ -7,7 +7,8 @@ const { src, dest, series, parallel, watch } = require('gulp'),
 		sourceMaps    = require('gulp-sourcemaps'),
 		browserSync   = require('browser-sync'),
 		concat        = require('gulp-concat'),
-		notify        = require('gulp-notify');
+		notify        = require('gulp-notify'),
+		gcmq          = require('gulp-group-css-media-queries');
 
 function styles () {
 	return src('app/sass/**/*.sass')
@@ -15,7 +16,6 @@ function styles () {
 	.pipe(sass().on('error', notify.onError()))
 	.pipe(rename({ suffix: '.min'}))
 	.pipe(autoprefixer(['last 2 versions']))
-	.pipe(cleanCSS())
 	.pipe(sourceMaps.write())
 	.pipe(dest('app/css'))
 	.pipe(browserSync.stream());
@@ -32,7 +32,16 @@ function serve () {
 	watch('app/sass/**/*.sass', styles);
 }
 
+function dist () {
+	return src('app/css/style.min.css')
+	.pipe(cleanCSS())
+	.pipe(dest('app/css'))
+	.pipe(gcmq())
+	.pipe(browserSync.stream());
+}
+
 exports.default = series(styles, serve);
+exports.dist = series(dist, serve);
 
 
 		
