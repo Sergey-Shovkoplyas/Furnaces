@@ -21,6 +21,23 @@ $( document ).ready(function() {
 		}
 	});
 
+	$(window).on('resize orientationchange load', function() {
+		let $slider = $('.features__slider');
+		if ( $(window).width() >= 768 ) {
+			console.log('Desctop!!!');
+			if ( $slider.hasClass('slick-initialized') ) {
+				$slider.slick('unslick');
+			}
+		} else {
+			console.log('Mobile!!!');
+			if ( !$slider.hasClass('slick-initialized') ) {
+				$slider.slick({
+					dots: false
+				});
+			}
+		}
+	});
+
 
 	$('.header__burger').on('click', function(e) {
 		$('.header__burger, .header__nav').toggleClass('active');
