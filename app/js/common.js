@@ -1,7 +1,12 @@
 $( document ).ready(function() {
 
 	$('.furnaces__slider').slick({
-		dots: true
+		dots: true,
+	});
+
+	$('.projects__sider').slick({
+		dots: false,
+		fade: false
 	});
 	
 	$(window).on('resize orientationchange load', function() {

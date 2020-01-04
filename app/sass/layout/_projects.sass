@@ -1,0 +1,164 @@
+.projects 
+  padding-bottom: 100px
+.projects__caption
+  margin-bottom: 45px
+  +media-breakpoint-down(sm)
+    margin-bottom: 70px
+.projects__sider
+  .slick-arrow 
+    bottom: 5px
+    width: 160px
+    height: 60px
+    background-color: #0794ff
+    border-radius: 0
+    border: none
+    transform: rotate(0deg)
+    &:hover 
+      transform: scale(1.01) rotate(0deg)
+    +media-breakpoint-down(md)
+      bottom: 291px
+    +media-breakpoint-down(sm)
+      top: -42px
+      width: 113px
+      height: 42px
+
+  .slick-prev
+    left: 248px
+    +media-breakpoint-down(lg)
+      left: 128px
+    +media-breakpoint-down(md)
+      left: 366px
+    +media-breakpoint-down(sm)
+      left: 0px 
+    &::before 
+      content: 'Предыдущий проект'
+      text-align: left
+      font-size: 13px
+      line-height: 0.8
+      color: #fff
+      position: absolute
+      top: 20px
+      left: 40px
+      +media-breakpoint-down(sm)
+        top: 12px
+        left: 20px
+        text-align: center
+    &::after 
+      top: 20px
+      left: 20px
+      width: 15px
+      height: 15px
+      transform: rotate(-45deg)
+      +media-breakpoint-down(sm)
+        top: 12px
+        left: 9px
+
+  .slick-next
+    left: 410px
+    +media-breakpoint-down(lg)
+      left: 290px
+    +media-breakpoint-down(md)
+      left: 529px
+    +media-breakpoint-down(sm)
+      left: 115px
+    &::before 
+      content: 'Cледующий проект'
+      text-align: right
+      font-size: 13px
+      line-height: 0.8
+      color: #fff
+      position: absolute
+      top: 20px
+      right: 40px
+      +media-breakpoint-down(sm)
+        top: 12px
+        left: 9px
+        text-align: center
+    &::after 
+      top: 20px
+      left: 126px
+      width: 15px
+      height: 15px
+      transform: rotate(135deg)
+      +media-breakpoint-down(sm)
+        top: 12px
+        left: 88px
+  
+.projects__item
+  margin: 0 -15px
+
+.projects__item-col
+  width: 50%
+  padding: 0 15px
+  +media-breakpoint-down(md)
+    width: 100%
+    float: none
+
+.projects__item-left
+  float: left
+  +media-breakpoint-down(md)
+    margin-bottom: 35px
+  +media-breakpoint-down(sm)
+    margin-bottom: 15px
+
+.projects__item-right
+  float: right
+
+.projects__img
+  display: block
+  width: 100%
+
+.projects__link
+  display: inline-block
+  margin: 20px 50px
+  font-size: 17px
+  font-weight: 500
+  color: #000
+  text-decoration: underline
+  +media-breakpoint-down(lg)
+    width: 110px
+    margin: 7px
+  +media-breakpoint-down(md)
+    width: auto
+    margin: 20px 0 0 90px
+  +media-breakpoint-down(sm)
+    margin: 10px 0 0 0
+
+.projects__description
+  height: 100%
+  padding: 50px 40px
+  color: #fff
+  background: url('../../img/projects-bg.jpg') no-repeat center
+  background-size: cover
+  +media-breakpoint-down(lg)
+    padding: 30px
+
+.projects__title
+  margin-bottom: 130px
+  font-size: 21px
+  font-weight: 500
+  span 
+    display: block
+    font-size: 18px
+    font-weight: 400
+  +media-breakpoint-down(lg)
+    margin-bottom: 85px
+  +media-breakpoint-down(md)
+    font-size: 18px
+    span 
+      font-size: 15px
+
+.project__text
+  display: flex
+  justify-content: space-between
+  font-size: 18px
+  line-height: 1.6
+  +media-breakpoint-down(md)
+    font-size: 16px
+  +media-breakpoint-down(sm)
+    font-size: 14px
+
+.project__text-dots
+  flex-grow: 1
+  margin: 5px 5px
+  border-bottom: 2px dotted #fff

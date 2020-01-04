@@ -1,0 +1,67 @@
+.callback 
+  padding: 75px 0
+  background: url('../img/callback-bg.jpg') no-repeat center
+  background-size: cover
+  +media-breakpoint-down(sm)
+    padding: 50px 0
+    background: url('../../img/callback-sm-bg.jpg') no-repeat center
+    background-size: cover
+
+
+.callback__caption
+  margin-bottom: 100px
+  color: #fff
+  +media-breakpoint-down(sm)
+    margin-bottom: 30px
+
+.callback__form
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+.callback__text
+  width: 37%
+  padding: 12px 40px
+  border: none
+  font-size: 21px
+  font-weight: 500
+  color: #000
+  +media-breakpoint-down(lg)
+    width: 34%
+  +media-breakpoint-down(md)
+    width: 48%
+    margin-bottom: 20px
+  +media-breakpoint-down(sm)
+    width: 100%
+    margin-bottom: 10px
+    padding: 8px 30px
+    font-size: 16px
+  &::placeholder 
+    color: #000
+
+.callback__btn
+  border-radius: 0
+  font-size: 18px
+  +media-breakpoint-down(md)
+    margin: 0 auto
+  +media-breakpoint-down(sm)
+    order: 1
+    padding: 12px 15px
+    font-size: 14px
+
+.callback__checkbox
+  flex-basis: 100%
+  margin-top: 50px
+  +media-breakpoint-down(sm)
+    display: flex
+    align-items: center
+    margin-top: 15px
+    margin-bottom: 25px
+  label 
+    margin-bottom: 0
+    font-size: 19px
+    color: #fff
+    +media-breakpoint-down(sm)
+      margin-left: 10px
+      font-size: 14px
+      line-height: 1
