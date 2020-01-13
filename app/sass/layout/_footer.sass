@@ -1,0 +1,119 @@
+.footer 
+  color: #000
+  padding: 50px 0
+  border-top: 2px solid #0eadff
+
+.footer__row 
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.footer__col 
+  flex-basis: 50%
+
++media-breakpoint-down(md)
+  .footer__block-1
+    flex-basis: 40%
+  .footer__block-2
+    flex-basis: 60%
+  .footer__block-3
+    flex-basis: 70%
+  .footer__block-4
+    flex-basis: 30%
++media-breakpoint-down(sm)
+  .footer__block-3
+    order: 2
+  .footer__block-4
+    order: 1
+  .footer__col 
+    flex-basis: 100%
+
+.footer__logo
+  margin-bottom: 30px
+  .logo
+    color: #000
+    &::before
+      background: url(../img/logo.png) no-repeat right
+  +media-breakpoint-down(sm)
+    .logo
+      margin-left: auto
+      margin-right: auto
+
+.footer__phone
+  display: block
+  margin-bottom: 40px
+  font-size: 20px
+  font-weight: 500
+  +media-breakpoint-down(sm)
+    display: block
+    margin-bottom: 30px
+    text-align: center
+    margin-left: auto
+    margin-right: auto
+
+.footer__nav
+  .nav 
+    padding-top: 0
+  .nav__list
+    float: right
+  .nav__link
+    font-size: 20px
+    color: #000
+  +media-breakpoint-down(sm)
+    padding-bottom: 30px
+    .nav__list
+      float: none
+    .nav__link
+      padding: 7px 0
+      font-size: 18px
+
+.footer__studio
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  padding-right: 100px
+  font-size: 16px
+  &::after 
+    content: ""
+    position: absolute
+    width: 88px
+    height: 27px
+    top: 0
+    right: 0
+    background: url('../img/studio-logo.png') no-repeat left
+  &:hover 
+    &::after 
+      background: url('../img/studio-logo.png') no-repeat right
+  +media-breakpoint-down(sm)
+    display: block
+    padding-right: 0px
+    padding-bottom: 35px
+    text-align: center
+    font-size: 14px
+    &::after 
+      top: 25px
+      right: 50%
+      transform: translateX(50%)
+
+.footer__social-wrap
+  float: right
+  +media-breakpoint-down(sm)
+    float: none 
+    padding-bottom: 30px
+    text-align: center
+
+.footer__social
+  display: inline-block
+  margin-right: 5px
+  vertical-align: middle
+  font-size: 0
+  width: 31px
+  height: 24px
+  background-image: url('../img/social.png')
+  &_vk 
+    background-position: -98px -10px
+  &_ins
+    background-position: -7px -10px
+  &_od
+    background-position: -51px -10px
+
