@@ -8,16 +8,27 @@ $( document ).ready(function() {
 		dots: false,
 		fade: false
 	});
+
+	$('.feedback__slider').slick({
+		dots: true,
+	});
+
+	//open full feedback on mobile version in feedback__slider
+	$('.feedback__open').on('click', function(e){
+		e.preventDefault();
+		$(this).prev('.feedback__text').toggleClass('feedback__text_open');
+	});
+	//__________________________________
 	
 	$(window).on('resize orientationchange load', function() {
 		let $slider = $('.services__slider');
 		if ( $(window).width() >= 768 ) {
-			console.log('Desctop!!!');
+			// console.log('Desctop!!!');
 			if ( $slider.hasClass('slick-initialized') ) {
 				$slider.slick('unslick');
 			}
 		} else {
-			console.log('Mobile!!!');
+			// console.log('Mobile!!!');
 			if ( !$slider.hasClass('slick-initialized') ) {
 				$slider.slick({
 					dots: false
@@ -29,12 +40,12 @@ $( document ).ready(function() {
 	$(window).on('resize orientationchange load', function() {
 		let $slider = $('.features__slider');
 		if ( $(window).width() >= 768 ) {
-			console.log('Desctop!!!');
+			// console.log('Desctop!!!');
 			if ( $slider.hasClass('slick-initialized') ) {
 				$slider.slick('unslick');
 			}
 		} else {
-			console.log('Mobile!!!');
+			// console.log('Mobile!!!');
 			if ( !$slider.hasClass('slick-initialized') ) {
 				$slider.slick({
 					dots: false
