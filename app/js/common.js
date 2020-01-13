@@ -14,10 +14,24 @@ $( document ).ready(function() {
 	});
 
 	//open full feedback on mobile version in feedback__slider
-	$('.feedback__open').on('click', function(e){
-		e.preventDefault();
-		$(this).prev('.feedback__text').toggleClass('feedback__text_open');
+	$(window).on('resize orientationchange load', function() {
+		
+		if ( $(window).width() < 768 ) {
+			$('.feedback__open').on('click', function(e){
+				e.preventDefault();
+				$(this).prev('.feedback__text').toggleClass('feedback__text_open');
+			});
+
+			$('.feedback__slider .slick-arrow').on('click', function(){
+				$('.feedback__text').each(function(indx, element){
+					if($(element).hasClass('feedback__text_open')) {
+						$(element).removeClass('feedback__text_open');
+					}
+				});
+			});
+		}
 	});
+
 	//__________________________________
 	
 	$(window).on('resize orientationchange load', function() {
